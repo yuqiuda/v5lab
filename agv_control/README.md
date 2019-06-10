@@ -34,16 +34,16 @@ sudo apt-get install ros-kinetic-serial
 | DISABLE     | 0        | 驱动器使能关闭                           |
 
 ## 函数集
-| 函数名                        | 参数                               | 说明                   | 功能                 | 注意事项                              |
-| :---------------------------- | :--------------------------------- | :--------------------- | :------------------- | :------------------------------------ |
-| [MotorControl](#MotorControl) | char* device <br>uint32_t baudrate | 设备串口号<br>波特率   | 构造函数, 对象初始化 | 用```ls /dev/ttyUSB*```查看设备串口号 |
-| [wheelEnable](#wheelEnable)   | uint32_t wheelId<br>int32_t enable | 麦轮的编号<br>使能信号 | 使能指定轮子的驱动器 | 发送速度等指令前, 需使能驱动器        |
+| 函数名                        | 参数                               | 说明                   | 功能                 |
+| :---------------------------- | :--------------------------------- | :--------------------- | :------------------- |
+| [MotorControl](#MotorControl) | char* device <br>uint32_t baudrate | 设备串口号<br>波特率   | 构造函数, 对象初始化 |
+| [wheelEnable](#wheelEnable)   | uint32_t wheelId<br>int32_t enable | 麦轮的编号<br>使能信号 | 使能指定轮子的驱动器 |
 |[activate](#activate)|int32_t wheelId|麦轮编号|生效传入指定驱动器的参数|参数设置完成之后需执行此函数,否则参数不会生效|
-|[activateAll](#activateall)|无|无|激活所有驱动器传入的参数|不能使用0号广播地址,会出问题
-|[setWheelSpeed](#setwheelspeed)|int32_t wheelId<br>int32_t speed|麦轮编号<br>麦轮速度|设置指定麦轮的转速|这里指麦轮的转速,不是线速度|
-|[setWheelSpeedAll](#setwheelspeedall)|int32_t speed_fl<br>int32_t speed_fr<br>int32_t speed_bl<br>int32_t speed_br|前左轮转速<br>前右轮转速<br>后左轮转速<br>后右轮转速|同上|同上|
-|[setSpeedXYW](#setspeedXYW)|double vx<br>double vy<br>double w|正前方线速度<br>向左线速度<br>向左转角速度|采用XYW的速度控制方式|这里指车的整体速度|
-|[readWheelSpeed](#readwheelspeed)|int32_t wheelId<br>int16_t*speed|麦轮编号<br>获取的转速存储在该变量中|获取指定麦轮的转速|speed变量需传入变量地址|
+|[activateAll](#activateall)|无|无|激活所有驱动器传入的参数|
+|[setWheelSpeed](#setwheelspeed)|int32_t wheelId<br>int32_t speed|麦轮编号<br>麦轮速度|设置指定麦轮的转速|
+|[setWheelSpeedAll](#setwheelspeedall)|int32_t speed_fl<br>int32_t speed_fr<br>int32_t speed_bl<br>int32_t speed_br|前左轮转速<br>前右轮转速<br>后左轮转速<br>后右轮转速|同上|
+|[setSpeedXYW](#setspeedXYW)|double vx<br>double vy<br>double w|正前方线速度<br>向左线速度<br>向左转角速度|采用XYW的速度控制方式|
+|[readWheelSpeed](#readwheelspeed)|int32_t wheelId<br>int16_t*speed|麦轮编号<br>获取的转速存储在该变量中|获取指定麦轮的转速|
 
 ### MotorControl
 ### wheelEnable
