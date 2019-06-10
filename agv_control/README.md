@@ -1,5 +1,4 @@
-<center>agv_control demo project</center>
----
+# agv_control demo project
 # 说明
 该项目为示例项目, 展示说明各个功能函数的使用方法.
 
