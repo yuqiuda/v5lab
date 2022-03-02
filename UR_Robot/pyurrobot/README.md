@@ -3,7 +3,7 @@ In normal conditions, we always use ros package universal_robot to startup the u
 # Document
 ## urdashboard.py
 ### describe
-This python file is provide a simple way to connect the dashboard, send the dashboard command to the robot.
+This python file provide a simple way to connect the dashboard, send the dashboard command to the robot.
 These command can control the robot system include power on/off robot, load the exist program etc.
 
 More command can refer to [Dashboard_server_CE-Series.pdf](./doc/Dashboard_Server_CB-Series.pdf)
